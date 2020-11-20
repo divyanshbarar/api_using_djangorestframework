@@ -18,6 +18,11 @@ from django.urls import path
 from django.conf.urls import url
 from hrm.api import *
 
+
+admin.site.site_header="API using Python"
+admin.site.site_title=" Welcome Divyansh"
+admin.site.index_title="This is where you can change the database"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/users_list/$',UserList.as_view(),name='user_list'),
